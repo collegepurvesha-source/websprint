@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Event Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2 style="color:aquamarine; font-size:70px;">Campus Event Map</h2>
+
+  <div class="controls">
+    <label for="eventDatePicker" style="color: white;">Select Date:</label>
+    <input type="date" id="eventDatePicker">
+
+    <label for="categorySelect" style="color: white; margin-left: 15px;">Category:</label>
+    <select id="categorySelect">
+      <option value="all">All Events</option>
+      <option value="cultural">Cultural</option>
+      <option value="sports">Sports</option>
+      <option value="tech">Tech</option>
+    </select>
+
+    <button id="addEventBtn">Add Event</button>
+  </div>
+
+  <div class="map-wrapper">
+    <div class="map" id="map">
+      <img src="file:///home/yasaswi/Downloads/map2.jpeg" alt="Campus Map">
+    </div>
+  </div>
+
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <h3>Add Event</h3>
+      <input type="text" id="eventTitle" placeholder="Event Title">
+      <textarea id="eventDesc" placeholder="Event Description"></textarea>
+      <input type="date" id="eventDate">
+
+      <select id="eventCategory">
+        <option value="cultural">Cultural</option>
+        <option value="sports">Sports</option>
+        <option value="tech">Tech</option>
+      </select>
+      
+      <select id="eventVenue">
+        <option value="">Select Venue</option>
+        <option>Central Library</option>
+        <option>UMIT Block</option> <option>Auditorium</option>
+        <option>Ground</option>
+        <option>Pharmacy</option>
+        <option>Polytechnic</option>
+      </select>
+
+      <button onclick="saveEvent()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: "GothamKnightsExpand-x3YG5";
+    src: url("/home/yasaswi/Downloads/gotham-knights-font/GothamKnightsExpand-x3YG5.otf") format("opentype");
+}
+body {
+  font-family: "GothamKnightsExpand-x3YG5";
+  text-align: center;
+  background-color: black;
+}
+
+button {
+  margin: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background-color: purple;
+  color: white;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 900px;
+  margin: 20px auto;
+}
+
+.map img {
+  width: 100%;
+  display: block;
+}
+
+/* Pins */
+.pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: crimson;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: left 0.5s ease, top 0.5s ease;
+}
+
+.pin::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 50%;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  width: 320px;
+  margin: 10% auto;
+  padding: 15px;
+  text-align: left;
+}
+
+.modal-content input, 
+.modal-content textarea, 
+.modal-content select {
+  width: 100%;
+  margin: 5px 0 10px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+
+/* Category Specific Colors */
+.pin.cultural {
+  background-color: #FFD700; /* Gold */
+}
+.pin.sports {
+  background-color: #FF4500; /* OrangeRed */
+}
+.pin.tech {
+  background-color: #00BFFF; /* DeepSkyBlue */
+}
